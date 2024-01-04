@@ -1,0 +1,38 @@
+
+        STRING METHODLARI
+
+1) toUpperCase() : TUM HARFLERI BUYUK HARFE CEVIRIR.
+                   BIZE STRING RETURN EDER.
+
+2) a.toLowerCase() : TUM HARFLERI KUCUK HARF YAPAR.
+                     BIZE STRING RETURN EDER.
+
+3) charAt(0) : BIZE DATA DAKI ILK KARAKTERI DONDURUR.
+               INDEX ILE CALISIR.
+4) length() : BIR DATADAKI KARAKTER SAYISINI BIZE VERIR.
+              INTEGER BIR DEGER DONDURUR.
+5) substring() :IKI KULLANIMI VARDIR.
+                i)substring(BASLANGIC VE BITIS INDEXI) VERILIRSE BASLANGIC INDEXI DAHIL
+                BITIS INDEXI HARIC YAZDIRIR.
+                METNIN ORTASINDAN DATA ALMAMIZI SAGLAR.
+                II)substring(BASLANGIC INDEXI) STRING'IN VERILEN INDEXTEN SONUNA
+                KADAR ALINMASINI SAGLAR.
+                BU METOD BIZE STRING DONDURUR.
+6) contains() : BIR DATA VARMI? YOKMU DIYE BAKAR.
+                BIZE BOOLEAN BIR DEGER DONDURUR.
+                CUMLENIN HERHANGI BIR YERIN DE ISTENILEN DATAYI
+                BULURSA TRUE DONDURUR.
+7) startsWith() : METNIN BAS KISMININ ISTENILEN DIZI (1 VEYA DAHA FAZLA KARAKTER)
+                  ILE BASLAYIP BASLAMADIGINI KONTROL EDER.
+8) endsWith () Metnin bellirli bir datayla bitip bitmedigini verir
+                Bize boolean bir sonuc dondurur
+                Tek karakterde , coklu karakterde kullanilabilir
+9) replace ()  Metnin icerisindeki belirli bir datanin yerine verilen diger datayi yerlestirir
+                String bir data dondurur
+                tekli karakterler ile de coklu karakterler ile de calisir
+                Ancak her iki taraftada " "  ya da  her iki taraftada ' ' kullanilmalidir.
+10) replaceAll()Bir grup datayi degistirmek icin kullanilir.
+                Bir grup datayi ifade edebilmek icin Regular
+                Expression (Regex) kullanilir
+
+

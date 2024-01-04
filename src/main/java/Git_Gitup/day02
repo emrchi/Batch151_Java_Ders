@@ -1,0 +1,60 @@
+.git klasoru working Space’de bulunur. Calismalarimizi ve degisikliklerini emin oluncaya kadar Staging Area’da tutariz.
+Emin olduktan sonra calismalarimizi Commit Store’a gondeririz. Commit Store#a bir commit komutu ile gondeririz.
+Bir dosyadaki degisiklikleri git add veya tum degisiklikleri git add . ile working space’den staging area’ya gondeririz.
+Son durumu git status komutunu kullaniriz. Dosyamda degisiklik var mi, modified mi, dosyam untracked mi yani
+ulasilamamis mi onlari goruruz.
+Working Space’de yani proje klasorumuzdeki bir degisiklik icin (git restore), tum degisiklikler icin (git restore .)
+komutunu kullaniriz ve degisiklikleri sileriz.
+Staging Area’daki yapmis oldugumuz degisiklikleri nasil iptal edebilir, geriye working space’a nasil alabiliriz?
+Spesifik bir dosyadaki degisiklik icin git restore --staged, tum degisiklikler icin git restore –staged . kullaniriz
+ve silme islemini saglariz.
+Dosyalarimizda yaptigimiz degisikliklerden sonra terminale girdik ve git status ile duruma bakmak istedigimizde kirmizi
+renkle modified: git1.txt ve modified git2.txt gorduk.
+git add . komutu ile degisiklikleri staging area’ya almak istedik.
+Sonrasinda git status komutu ile duruma bakinca bu defa dosyalarimizin isimlerinin yesil rekle modified olarak
+yazildigini gorduk. Boylece degisikliklerin alinmis oldugunu anladik.
+hem stageden hem de working spaceden degisiklikleri iptal etmek icin git reset --hard komutu kullanilir.
+Bu komut riskli komutlardandir. Degisiklikler bununla iptal edilirse degisiklikleri geri alamayiz.
+INTELLIJ TIME
+En ustte File’a git, new’i tikla, project’i sec. New Project penceresi acildi. Projemize MyGitGithubProjectNT ismini verelim.
+Location kisminin sag tarafindaki klasor secenegini tiklayin, orada C’nin altinda Users’I bul ve oradan Desktop’u bul ve
+oradaki GitProjectsNT projemizi secelim ve OK kismina basalim, create kisminda this window yaziliydi bunu sectik.
+Boylece MyGitGithubProjectNT projemiz Project altinda gorundu.
+Desktop’I location icinde bulamazsak, oldugu yerde kalsin. Ancak language Java, Build system kismi Intellij olarak kalmali.
+Daha sonra projemiz ismi altinda src klasoru uzerine gel, sagi tikla, new ve devaminda java class’I tiklayarak yeni bir
+class olustur, adina AtmProject diyelim ve icinde main metodu olusturalim.
+main metod icinde mesajimizi yazdiktan sonra en alt kisimda Terminal'i secince classimiz alt kisminda
+terminal acildi.
+Terminalde son sirada nerede oldugumuz sirali olarak yazili. Biz MyGitGitHubProject icindeyiz.
+Ilk yapmamiz gereken komut git init'dir. git init komutu kullanarak repository'i baslatiriz.
+git status ile durumumuzu gormek istedik. Bazi degisiklikler yapmisiz, kirmizi renkle .idea/
+projemizin ismi, pom.xml, src/ nin yazili oldugunu gorduk. Degisikliklerin Stage'e almak,
+takip edebilmek icin git add .
+Daha sonra clasimiz icinde sout'un alt satirina \\version1 yazarak bir degisiklik yaptik ve yeni degisikligi
+git add . yazarak Staging area;ya aldik.
+devaminda git commit -m"v1" yazinca v1'de kac file degisti, kac ekleme yapildi gorduk.
+Clasimiz icine yeni ozellikler ekledik. Yeni degisikligi stage'a almadan dogrudan commit olusturmayi
+yapmak icin git commit -am"v2" yazdik
+sout icine yine mesaj yazdiktan sonra version3 olarak bunu adlandirdik. Ayni sekilde git commit -am"v3" yazdik.
+Boylece updated 1 path from ...seklinde yazildigini gorduk. Versiyon5 ve 6'yi iptal edip versiyon 4'de
+kalmak istersek git commit -m"yeni_v4" yazinca Head->master yeni_v4 oldu. Su sekilde goruldu:
+65ce4fe (HEAD -> master) yeni_v4
+versiyon 6'ya geri donmek istersek git checkout yanina versiyon 6'nin  hashcodunu bir bosluk sonrasi
+nokta koyarak versiyon 6'ya tekrar gidiyoruz ve bu defa son versiyonumuz olan v6 Head->master oluyor.
+Bir projeyi git ile iliskilendirince calismalarimizi ayri bir branch olusturarak gelistirebiliriz.
+Ana projemizi orjinal kodlarimiza yeni ozellik ekleyince hatalardan olabildigince korumak icin master branch uzerinde
+calismak yerine yeni bir branch uzerinde calismak daha mantikli olur. Ayri bir branch icin projemizin bir kopyasini aliyoruz.
+Yeni ekledigimiz ozellikler master branch’imiza zarar vermeden calisiyorsa bu ozellikleri, versiyonlari master branch’e aktaririz.
+Ancak yeni branch’de calisirken sorun olurlarsa master branch’imizi olumsuz bir sekilde etkilememis oluruz.
+Projemiz uzerinde birden fazla yazilimci olarak birlikte calisabiliriz. Birimiz giris sayfasindan, digeri sign isinden
+sorumlu olabilir. Mevcut projemizin bu calismalarda etkilenmemesi icin master branch yerine her yazilimci kendi branch’I
+uzerinde calisir. Calismalarimiz sorunsuz calistiginda her yazilimci kendi calismasini ana dosyaya aktarir.
+yeni bir branch olusturmak icin git branch kendi ismimizi yaziyoruz. Daha sonra sadece git branch yazinca
+bir master bir de kendi ismimizle adlandirdigimiz branch oldugunu gorduk. Ornek master ve zeynep
+master yesil renkli ve yani basinda yildiz isareti var. Aktif olan master'dir. zeynep branch'ine gecis
+yapmadik henuz.
+Hangisinin yaninda yildiz isareti varsa aktif olan odur. Gecis icin git checkout zeynep
+yazarak hangi branch'e gecmek istedigimizi belirttik ve ona gecis yaptik.
+Ikinci class'daki ozellikler birinci class icinde gorulmedi, ancak terminalde problem yok merge sonrasi
+
+
